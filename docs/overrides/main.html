@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block announce %}
+{{ super() }}
+🚀&nbsp; Check out <b><a href="https://docs.cubyc.com" style="color: #9079A9;">Cubyc</a></b> for
+more data science!
+{% endblock %}
+
+
+{% block content %}
+{{ super() }}
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+<script>
+    AOS.init();
+</script>
+
+{% endblock %}

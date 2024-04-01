@@ -1,0 +1,130 @@
+:root {
+    --md-primary-fg-color: #82b482;
+    --md-primary-bg-color: #FAF4ED;
+    --md-source-fg-color: #FAF4ED;
+    --md-accent-fg-color: #5F957E;
+    --md-select-fg-color: #5F957E;
+}
+
+/*Dark mode*/
+[data-md-color-scheme="slate"] {
+    --md-default-bg-color: #2a2a2a;
+    --md-code-bg-color: #3a3a3a;
+    --md-code-hl-color: #3a3a3a;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.md-source {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-source-fg-color);
+}
+
+.md-nav__source {
+    background-color: var(--md-primary-fg-color);
+    color: blue;
+}
+
+.md-banner {
+    background-color: #2a2a2a;
+    color: var(--md-source-fg-color);
+}
+
+.md-button {
+    color: var(--md-accent-fg-color);
+    margin: 1em
+}
+
+.md-button:not([disabled]):hover {
+    background-color: var(--md-accent-fg-color);
+    border-color: var(--md-accent-fg-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main-container-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+    align-items: center
+}
+
+.main-container-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+    align-items: center
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-container-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container-right {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .grid-item {
+        max-width: 90vw;
+    }
+
+    .tabbed-set {
+        max-width: 90vw;
+    }
+
+    .cubyc-title {
+        max-width: 100%
+    }
+}
+
+.tabbed-set .tabbed-alternate {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid;
+    border-image: linear-gradient(45deg, var(--md-primary-fg-color), var(--md-accent-fg-color)) 1;
+    background-clip: padding-box;
+}
+
+.main-container-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center
+}
+
+.main-container-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.cubyc-title h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.md-typeset .md-button {
+    border-radius: 0.5em;
+    margin-left: 0;
+}
+
+.cubyc-title {
+    max-width: 70%;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}

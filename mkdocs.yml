@@ -1,0 +1,133 @@
+site_name: Anterior
+site_url: https://docs.cubyc.com/anterior
+
+repo_name: "cubyc-team/anterior"
+repo_url: https://github.com/cubyc-team/anterior
+
+theme:
+  name: "material"
+  custom_dir: docs/overrides
+  features:
+    - content.code.copy
+    - navigation.tabs
+    - navigation.footer
+    - content.code.annotate
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search-highlight
+    - content.tabs.link
+    - header.autohide
+    - announce.dismiss
+
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      primary: custom
+      accent: custom
+      background: custom
+      foreground: custom
+      scheme: light
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    - media: '(prefers-color-scheme: dark)'
+      primary: custom
+      accent: custom
+      background: custom
+      foreground: custom
+      scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: 'Schibsted Grotesk'
+  logo: img/logo.svg
+  favicon: img/favicon.svg
+
+extra_css:
+  - stylesheets/custom.css
+
+plugins:
+  - search
+  - social:
+      cards_layout_options:
+        background_color: "#82b482"
+  - autorefs
+  - site-urls
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            show_source: false
+            show_bases: false
+            inherited_members: true
+            members_order: source
+            separate_signature: true
+            unwrap_annotated: true
+            merge_init_into_class: true
+            docstring_section_style: spacy
+            signature_crossrefs: true
+            show_root_heading: true
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.blocks.details
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - footnotes
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - getting_started/index.md
+      - 'Concepts': getting_started/concepts.md
+      - 'FAQ': getting_started/faq.md
+      - 'Community': getting_started/community.md
+  - 'Tutorials':
+      - 'Algorithmic trading': tutorials/trading.md
+      - 'Marketing analytics': tutorials/marketing.md
+      - 'Sales forecasting': tutorials/sales.md
+  - Documentation:
+    - Source:
+        - OracleDataFrame: documentation/source/oracle_data_frame.md
+        - OracleSeries: documentation/source/oracle_series.md
+    - Warp:
+       - 'BackTester': documentation/warp/backtester.md
+       - 'Schedule': documentation/warp/schedule.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/cubyc
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/cubyc_
+    - icon: fontawesome/brands/github
+      link: https://github.com/cubyc-team/cubyc
+  analytics:
+    provider: google
+    property: G-42Y40W2GSK
+  generator: false
+
+copyright: Copyright &copy; 2024 Cubyc, Inc.
