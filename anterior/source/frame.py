@@ -123,7 +123,7 @@ class OracleDataFrame:
         return cls(pd.read_csv(path, **kwargs), date_col=date_col, past=past)
 
     def _get_filtered_df(self):
-        current_datetime = datetime.datetime.now()
+        current_datetime = datetime.datetime.utcnow()
 
         if self.past:
             if self._date_col == "index":
